@@ -2,7 +2,6 @@
 const express = require("express");
 const {postPetsComplain} =  require("../Controlller/petsControllar")
 const app = express.Router();
-const imageUploader = require("../Middlewares/missingVehicle");
 const { authMiddlware } = require("../Middlewares/authmiddleware");
 
 
