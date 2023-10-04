@@ -4,9 +4,6 @@ const bodyParser = require('body-parser');
 require("dotenv").config();
 const connectToDatabase = require("./Config/db");
 const civilianRouter = require('./Router/user.route');
-const vehicleRouter = require("./Router/missingVehicle.route")
-const missingOtherRouter = require("./Router/missingOther.route");
-const bannerRouter = require("./Router/banner.route");
 const {PetsComplain}  =require("./Router/missingpets.route");
 const app = express();
 const port = process.env.PORT || 8080;
@@ -21,9 +18,6 @@ app.use(cors());
 
 // app.use('/civilian', civilianRouter);
 app.use('/civilian', civilianRouter);
-app.use('/missing-vehicle', vehicleRouter);
-app.use("/missingOther", missingOtherRouter);
-app.use("/Banner", bannerRouter);
 app.use("/api/v1/", PetsComplain );
 
 app.use(express.urlencoded({ extended: true }));
