@@ -2,7 +2,6 @@
 const express = require('express');
 const civilianRouter = express.Router();
 const civilianController = require('../Controlller/user.controller');
-const imageUpload = require("../Middleware/imageUploader")
 
 // Register a new user
 civilianRouter.post('/register',civilianController.registerCivilian);
